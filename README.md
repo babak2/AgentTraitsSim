@@ -8,11 +8,11 @@ This model of customer engagement in the social media industry looks at how cult
 
 In particular, the simulations vary across the following aspects:
 
-    The number of agents in the population, including levels of 100, 1,000, 5,000, 50,000, 100,000, 250,000, and 1,000,000. (For testing purposes, it's recommended to limit populations to 100 and 1,000 to ensure reasonable execution time.)
-    Probabilities of a new agent having trait == 'A', with increments of 0.05 from 0 to 1.
-    Probabilities of a new agent having trait_2 == 'X', with increments of 0.05 from 0 to 1.
-    The linkage between trait == 'A' and trait_2 == 'X', adjusted in increments of 0.05 from 0 to 1.
-    Additional payoff for trait=='A', incremented by 1 from 0 to 10.
+- The number of agents in the population, including levels of 100, 1,000, 5,000, 50,000, 100,000, 250,000, and 1,000,000. (For testing purposes, it's recommended to limit populations to 100 and 1,000 to ensure reasonable execution time.)
+- Probabilities of a new agent having trait == 'A', with increments of 0.05 from 0 to 1.
+- Probabilities of a new agent having trait_2 == 'X', with increments of 0.05 from 0 to 1.
+- The linkage between trait == 'A' and trait_2 == 'X', adjusted in increments of 0.05 from 0 to 1.
+- Additional payoff for trait=='A', incremented by 1 from 0 to 10.
     The reproduction strategy, which remains constant as "indirect_biased_transmission".
 
 
