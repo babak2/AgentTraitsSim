@@ -44,11 +44,11 @@ Install these libraries using the following command:
 
 The program reads input parameters from a CSV file named parameters.csv. The CSV file should have the following columns:
 
-    n_agents: Number of agents in the population.
-    trait_p: Probability of trait 'A' for a new agent.
-    trait_2_p: Probability of trait_2 'X' for a new agent.
-    link: Probability of the link between trait 'A' and trait_2 'X'.
-    additional_payoff: Additional payoff for trait 'A'.
+- `n_agents`: Number of agents in the population.
+- `trait_p`: Probability of trait 'A' for a new agent.
+- `trait_2_p`: Probability of trait_2 'X' for a new agent.
+- `link`: Probability of the link between trait 'A' and trait_2 'X'.
+- `additional_payoff`: Additional payoff for trait 'A'.
 
 ## Input File Format
 
@@ -67,7 +67,6 @@ The program reads input parameters from a CSV file named `parameters.csv`. The C
 An example is located in the current directory.
 
 ## Output Format
-
 
 Output Files:
 - The simulation results are saved in SVG format. Each output file includes plots showing the proportion of agents with trait 'A' and the proportion of agents with trait_2 'X' over time.
