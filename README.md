@@ -2,7 +2,7 @@
 
 AgentTraitsSim is a Python program for simulating the evolution of agent traits in a social media community. It explores how different structural characteristics of the environment affect the transmission of behaviors among customer communities. The simulation is based on agent-based modeling and allows for varying population sizes, trait probabilities, trait links, payoff bonuses, and reproduction strategies.
 
-ats (Agent Traits Sim) program reads parameter values from a CSV file, iterates over the combinations, performs simulations, plots and saves output figures, and finally stores the simulation results in another CSV file.
+ats (Agent Traits Sim) program reads parameter values from a CSV file, iterates over the combinations, performs simulations, plots and saves output figures, and finally stores the simulation results in another CSV file (all output files are stored in the Output directory).
 
 This model of customer engagement in the social media industry looks at how cultural norms evolve within different social media structures, utilizing empirical data collected from various observational studies. The simulation runs a series of experiments altering the structural characteristics of the environment to examine their impact on the transmission of behaviors within customer communities.
 
@@ -72,12 +72,11 @@ Output Files:
 - The simulation results are saved in SVG format. Each output file includes plots showing the proportion of agents with trait 'A' and the proportion of agents with trait_2 'X' over time.
 - simulation_results.csv:  A CSV file containing svarious parameter combinations.
 
-An example is located in `example_data` directory.
-
+All the output files are stored in the `Output` directory.
 
 ## Output File Format
 
-After running the simulation for various parameter combinations, the program generates an output CSV file named `simulation_results.csv`. The CSV file will have the following columns:
+After running the simulation for various parameter combinations, the program generates an output CSV file named `simulation_results.csv` in the `Output` directory. The CSV file will have the following columns:
 
 |population_size|trait_prob|trait_2_prob|trait_link|payoff_bonus| filename                     |
 |---------------|----------|------------|----------|------------|------------------------------|
@@ -91,7 +90,7 @@ After running the simulation for various parameter combinations, the program gen
 
 The `filename` column indicates the name of the SVG file that corresponds to the output plot generated for each parameter combination.
 
-An example is located in the current directory.
+An example is located in the `Output` directory.
 
 ## Usage
 
