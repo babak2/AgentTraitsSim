@@ -1,4 +1,6 @@
 import random
+import os
+
 from matplotlib import pyplot
 
 import pandas as pd
@@ -189,13 +191,18 @@ def main(population_size, trait_prob, trait_2_prob, trait_link, payoff_bonus):
     num_periods = 150
     for i in range(num_periods):
         population.learning_epoch()
+        
+    # Create the Output directory if it doesn't exist
+    output_dir = "Output"
+    os.makedirs(output_dir, exist_ok=True)  # Create the directory if it doesn't exist
 
-    # Plot and save the output figures
+    # Plot and save the output figures in the output directory
+    output_filename = f"output_{population_size}_{trait_prob}_{trait_2_prob}_{trait_link}_{payoff_bonus}.svg"
+    output_path = os.path.join(output_dir, output_filename)
     pyplot.plot(population.proportion_of_as)
     pyplot.plot(population.proportion_of_xs)
     pyplot.ylim([0, 1])
-    filename = f"output_{population_size}_{trait_prob}_{trait_2_prob}_{trait_link}_{payoff_bonus}.svg"
-    pyplot.savefig(filename, format="svg")
+    pyplot.savefig(output_path, format="svg")
     pyplot.close()
 
     return {
@@ -204,13 +211,15 @@ def main(population_size, trait_prob, trait_2_prob, trait_link, payoff_bonus):
         'trait_2_prob': trait_2_prob,
         'trait_link': trait_link,
         'payoff_bonus': payoff_bonus,
-        'filename': filename
+        'filename': output_filename
     }
 
 
 if __name__ == "__main__":
     # Read the parameters from the CSV file
     parameters_df = pd.read_csv('paramaters.csv')
+
+    # os.makedirs('Output', exist_ok=True)
 
     # Iterate over the parameter combinations and run simulations
     results = []
@@ -224,6 +233,7 @@ if __name__ == "__main__":
         result = main(population_size, trait_prob, trait_2_prob, trait_link, payoff_bonus)
         results.append(result)
 
-    # Save the results to a CSV file
+    # Save the results to a CSV file within the 'Output' directory
     results_df = pd.DataFrame(results)
-    results_df.to_csv('simulation_results.csv', index=False)
+    output_path = os.path.join('Output', 'simulation_results.csv')
+    results_df.to_csv(output_path, index=False)
