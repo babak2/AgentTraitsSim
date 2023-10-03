@@ -104,12 +104,9 @@ To use ats, run the ats.py script with the following command:
 ats is licensed under the GNU GENERAL PUBLIC LICENSE. See LICENSE for more information.
 
 
-## Contact 
+## Author 
 
 Babak Mahdavi Aresetani
 
 babak.m.ardestani@gmail.com
 
-
-## Next
-...
